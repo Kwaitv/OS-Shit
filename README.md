@@ -33,7 +33,7 @@ so if ur not running `NetworkManager` and `/etc/netplan/` is empty all network d
 to use a linux machine as a gateway where `Internet ---- Linux machine ---- ur machine` u need somewhere in `nmcli connection show <wired connection>` to have the field `ipv4.method` be set to `shared` and on ur machine u need to set ur ip to one under the subnet of the `Linux machine` with the `ipv4.routes` and `ipv4.gateway` set to the ip of the Linux machine
 u can do it without shared u just need to set routes for all child machines off ur Linux machine (edited)
 
-`nmcli connection add con-name direct ipv4.gateway 10.42.0.1 ipv4.addresses 10.42.0.2/24 ipv4.routes 10.42.0.1 type ethernet` example command for `ur machine`
+`nmcli connection add con-name direct ipv4.gateway 10.42.0.1 ipv4.addresses 10.42.0.2/24 ipv4.method manual ipv4.routes 10.42.0.1 type ethernet` example command for `ur machine`
 
 for u master machine a command like `nmcli connection add con-name children ipv4.addresses 10.42.0.1/24 ipv4.method shared master <the interface device like eno1> type ethernet` should work
 

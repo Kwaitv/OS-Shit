@@ -23,6 +23,7 @@ Requires Secure Boot to be disabled (Nvidia)
 huh `envycontrol` just kinda works for switching gpus
 ### NVIDIA driver preventing linux from loading (specifically Xserver)
 solution was in `/etc/default/grub` adding `nomodeset` to `LINUX_CMDLINE_DEFAULT=`
+prefereably just use an `linux-nvidia` type kernel image
 
 ### Video Hardware Acceleration playback
 [https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/](https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/ "https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/")

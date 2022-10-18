@@ -21,6 +21,8 @@ to have a script run on resume from suspend/hibernate copy it to `/lib/systemd/s
 Requires Secure Boot to be disabled (Nvidia)
 ### Disabling nvidia GPU
 huh `envycontrol` just kinda works for switching gpus
+### NVIDIA driver preventing linux from loading (specifically Xserver)
+solution was in `/etc/default/grub` adding `nomodeset` to `LINUX_CMDLINE_DEFAULT=`
 
 ### Video Hardware Acceleration playback
 [https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/](https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/ "https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/")
@@ -98,7 +100,7 @@ WantedBy=default.target
 ### PGP sigs
 if you come across a `invalid or corrupted package (PGP signature)` or something along those lines run a `pacman -S archlinux-keyring` and then `pacman -Syu`
 
-# Headass Windows
+# Head-ass Windows
 ## Chocolaty Powershell install
 `Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))` 
 

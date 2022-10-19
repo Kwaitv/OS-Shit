@@ -28,9 +28,12 @@ prefereably just use an `linux-nvidia` type kernel image
 ### Video Hardware Acceleration playback
 [https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/](https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/ "https://reddit.com/r/linux/comments/xcikym/tutorial_how_to_enable_hardware_video/")
 
+## Git
+
 ## Network
 ### Rsync bullshit
 for rsync syntax like `rsync <1>/<2>/<3> <dest>:<4>` it will copy copy `<1>`, and `<2>` to the destination folder not just `<3>`, u need to run a `cd <1>/<2>/` then a your `rsync <3> <dest>:<4>`
+`
 ### Netplan instead if NetworkManager isn't enabled
 so if ur not running `NetworkManager` and `/etc/netplan/` is empty all network devices will show up as off in `networkctl`
 

@@ -17,6 +17,11 @@ to have a script run on resume from suspend/hibernate copy it to `/lib/systemd/s
 ## More recent OpengL version on Spice Server display server
 [Virtual OpenGL Driver](https://thomas.inf3.ch/2019-06-12-opengl-kvm-mesa3d/index.html)
 
+## Refresh Udev Rules
+```
+udevadm control --reload-rules && udevadm trigger
+```
+
 ## GPU Drivers
 Requires Secure Boot to be disabled (Nvidia)
 ### Disabling nvidia GPU
@@ -100,7 +105,8 @@ Execstart=/bin/batCPU
 
 [Install] 
 WantedBy=default.target
-```
+``` 
+
 
 ## Pacman
 ### PGP sigs

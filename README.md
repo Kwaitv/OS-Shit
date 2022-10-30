@@ -42,6 +42,9 @@ for rsync syntax like `rsync <1>/<2>/<3> <dest>:<4>` it will copy copy `<1>`, an
 ### Netplan instead if NetworkManager isn't enabled
 so if ur not running `NetworkManager` and `/etc/netplan/` is empty all network devices will show up as off in `networkctl`
 
+### Netplan ignore ip lease
+add ` ignore-carrier: true` to netplan for each interface you want to have ignore the waiting for ip to get leased
+
 ### Utilizing a Linux box as a gateway rather than a switch/router
 to use a linux machine as a gateway where `Internet ---- Linux machine ---- ur machine` u need somewhere in `nmcli connection show <wired connection>` to have the field `ipv4.method` be set to `shared` and on ur machine u need to set ur ip to one under the subnet of the `Linux machine` with the `ipv4.routes` and `ipv4.gateway` set to the ip of the Linux machine
 u can do it without shared u just need to set routes for all child machines off ur Linux machine (edited)

@@ -35,6 +35,9 @@ prefereably just use an `linux-nvidia` type kernel image
 
 ## Git
 
+## Tmux
+if you have a nested tmux session to get tmux commands into the inner session use the prefix key twice before you do ur tmux command
+
 ## Network
 ### Rsync bullshit
 for rsync syntax like `rsync <1>/<2>/<3> <dest>:<4>` it will copy copy `<1>`, and `<2>` to the destination folder not just `<3>`, u need to run a `cd <1>/<2>/` then a your `rsync <3> <dest>:<4>`

@@ -24,6 +24,9 @@ udevadm control --reload-rules && udevadm trigger
 
 ## GPU Drivers
 Requires Secure Boot to be disabled (Nvidia)
+### Intel: Indirect Branch checking
+for nvidia prorietary drivers to work for a lot of distros past kernel 5.18 in kernal command arguments `ibt=off` needs to be set.
+
 ### Disabling nvidia GPU
 huh `envycontrol` just kinda works for switching gpus
 ### NVIDIA driver preventing linux from loading (specifically Xserver)
